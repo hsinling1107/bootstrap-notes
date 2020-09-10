@@ -1,0 +1,89 @@
+
+/*將carousel的indicators改成圓點*/
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+
+h5{
+	padding: 5px;
+	border: red 2px solid;
+}
+
+
+/*for position.html*/
+.parent{
+	min-height: 500px;
+}
+
+.parent-static{
+	position: static !important;
+}
+
+.parent-static-child{
+	border: red 5px dashed;
+}
+
+
+
+.child{
+	min-height: 100px;
+	min-width: 200px;
+}
+
+.child1{
+	border-radius: 30px;
+}
+
+
+#test0{
+	position: sticky;
+	top: 16px;
+	background-color: yellow;
+	text-align: center;
+	color: black;
+}
+
+
+#test1{
+	position: absolute;
+	right: 0px;
+	top: 300px;
+	width: 100px;
+	height: 50px;
+	background-color: red;
+	text-align: center;
+	color: white;
+}
+
+#test2{
+	position: fixed;
+	right: 0px;
+	top: 400px;
+	width: 100px;
+	height: 50px;
+	background-color: red;
+	text-align: center;
+	color: white;
+}
+
+/*background-attachment test*/
+.bg-attach{
+	position: relative;
+	min-height: 200px;
+	background-image: url(img/tumor.jpg);
+	text-align: center;
+	color: white;
+
+}
+
+
+.dark-overlay{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	margin: 0;
+    background-color: rgba(0,0,0,0.3);
+}

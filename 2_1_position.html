@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+  crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <title>Bootstrap Sandbox</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="display-3 text-center my-4">Position</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              2: Utilities
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="2_1_position.html">2.1 Position</a>
+              <a class="dropdown-item" href="2_2_basic_typography.html">2.2 Basic Typography</a>
+              <a class="dropdown-item" href="2_3_text_alignment_display.html">2.3 Text Alignment & Display</a>
+              <a class="dropdown-item" href="2_4_floats_position.html">2.4 Floats & Position</a>
+              <a class="dropdown-item" href="2_5_colors_background.html">2.5: Colors & Background</a>
+              <a class="dropdown-item" href="2_6_spacing.html">2.6 Spacing</a>
+              <a class="dropdown-item" href="2_7_sizing.html">2.7 Sizing</a>
+              <a class="dropdown-item" href="2_8_breakpoints.html">2.8 Breakpoints</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-success btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              3: CSS Components
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="3_2_buttons.html">3.2 Buttons</a>
+              <a class="dropdown-item" href="3_3_navbar.html">3.3 Navbar</a>
+              <a class="dropdown-item" href="3_4_list_groups_badges.html">3.4 List Groups & Badges</a>
+              <a class="dropdown-item" href="3_5_forms.html">3.5 Forms</a>
+              <a class="dropdown-item" href="3_6_input_groups.html">3.6 Input Groups</a>
+              <a class="dropdown-item" href="3_7_alerts_progress.html">3.7 Alerts & Progress</a>
+              <a class="dropdown-item" href="3_8_tables_pagination.html">3.8 Tables & Pagination</a>
+              <a class="dropdown-item" href="3_9_cards.html">3.9 Cards</a>
+              <a class="dropdown-item" href="3_10_media_object.html">3.10 Media Objects</a>
+              <a class="dropdown-item" href="3_11_jumbotron.html">3.11 Jumbotron</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-warning btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              4: Grid & Flexbox
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="4_2_grid_system.html">4.2 Grid System</a>
+              <a class="dropdown-item" href="4_3_grid_alignment.html">4.3 Grid Alignment</a>
+              <a class="dropdown-item" href="4_4_flexbox.html">4.4 Flexbox</a>
+              <a class="dropdown-item" href="4_5_auto_margins_wrapping_order.html">4.5 Auto Margins & Wrap</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="dropdown">
+            <button class="btn btn-danger btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+              5: JavaScript Widgets
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="5_2_carousel.html">5.2 Carousel</a>
+              <a class="dropdown-item" href="5_3_collapse.html">5.3 Collapse</a>
+              <a class="dropdown-item" href="5_4_tooltips.html">5.4 Tooltips</a>
+              <a class="dropdown-item" href="5_5_popovers.html">5.5 Popovers</a>
+              <a class="dropdown-item" href="5_6_modals.html">5.6 Modals</a>
+              <a class="dropdown-item" href="5_7_scrollspy.html">5.7 ScrollSpy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </header>
+
+  <!-- Position   -->
+
+  <div class='container'>
+
+
+
+    <!--------- 0. Static --------->
+    <h2 class="mt-5">0. Static：完全不動</h2>
+    <p>
+      Position預設為static
+    </p>
+    <div class="row mb-5">
+      <!-- static -->
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: no position.</h3>
+          <p>position:static(預設)</p>
+          <button class="btn btn-success child child1">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+      <!-- relative without direction -->
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: relative w/o direction</h3>
+          <p>child1 (abosolute)</p>
+          <button class="btn btn-success child child1"
+                  style="position:relative; opacity: 0.85;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+      <!-- absolute without direction -->
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: absolute w/o direction</h3>
+          <p>child1 (abosolute)</p>
+          <button class="btn btn-success child child1"
+                  style="position:absolute; opacity: 0.85;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!---------- 1. Relative ----------->
+    <h2 class="mt-5">1. Relative：相對於自己的原位置移動，被提起後不影響其它子tag</h2>
+    <p>
+      Position預設為static，而relative基本同static，但可在原static的距離中，多加上下左右的距離<br/>
+      但因下方tag位置不受影響，會改變整體排版，故relative極少搭配top/bottom/left/right使用。
+    </p>
+    <div class="row mb-5">
+      <!-- relative-top -->
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: relative</h3>
+          <p>child1 (relative ; top:50px)</p>
+          <button class="btn btn-success child child1"
+                  style="position:relative; top:50px;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+      <!-- relative-right -->
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: relative</h3>
+          <p>child1 (relative ; right:50px)</p>
+          <button class="btn btn-success child child1"
+                  style="position:relative; right:50px;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+      <!-- relative-bottom -->
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: relative</h3>
+          <p>child1(relative ;bottom:50px)</p>
+          <button class="btn btn-success child child1"
+                  style="position:relative; bottom:50px;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+      <!-- relative-left -->
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: relative</h3>
+          <p>child1 (relative ; left:50px)</p>
+          <button class="btn btn-success child child1"
+                  style="position:relative; left:50px;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+      
+    </div>
+
+    <!---------- 2. Absolute  ---------->
+    <h2 class="mt-5">2. Absolute：當parent為non-static時</h2>
+    <p>
+      此子Tag從parent被提起，而其它子tag會移上來就像此tag不存在一樣。<br/>
+      常搭配top/bottom/right/left使用，使其固定在網頁的某位置
+    </p>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: absolute2</h3>
+          <p>child1 (abosolute ;<br>top:0px)</p>
+          <button class="btn btn-success child child1"
+                  style="position:absolute; top:0px; opacity: 0.85;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: absolute2</h3>
+          <p>child1 (abosolute ; right:0px)</p>
+          <button class="btn btn-success child child1"
+                  style="position:absolute; right:0px; opacity: 0.85;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: absolute2</h3>
+          <p>child1 (abosolute ; bottom:0px)</p>
+          <button class="btn btn-success child child1"
+                  style="position:absolute; bottom:0px; opacity: 0.85;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="parent bg-primary text-light p-4 rounded">
+          <h3>Parent: absolute3</h3>
+          <p>child1 (abosolute ;<br>left:0px)</p>
+          <button class="btn btn-success child child1"
+                  style="position:absolute; left:0px; opacity: 0.85;">
+                  Child One</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+    </div>
+
+    <!---------- 3. Absolute2  ---------->
+    <h2 class="mt-5">3. Absolute：當parent為static時</h2>
+    <p>
+      此子Tag從parent被提起，而其它子tag會移上來就像此tag不存在一樣。<br/>
+      常搭配top/bottom/right/left使用，使其固定在網頁的某位置
+    </p>
+    <div class="row border border-danger" >
+      <div class="col-md-3 parent-static">
+        <div class="parent-static bg-primary text-light p-4 rounded">
+          <h3>Parent: absolute</h3>
+          <p>child1 (abosolute ;<br>top:0px)</p>
+          <button class="btn btn-success child child1 parent-static-child"
+                  style="position:absolute; top:0px; opacity: 0.85;">
+                  parent-static, abs, top0</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+
+      <div class="col-md-3 parent-static">
+        <div class="parent-static bg-primary text-light p-4 rounded">
+          <h3>Parent: absolute</h3>
+          <p>child1 (abosolute ;<br> right:0px)</p>
+          <button class="btn btn-success child child1 parent-static-child"
+                  style="position:absolute; right:0px; opacity: 0.85;">
+                  parent-static, abs, right0</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+
+      <div class="col-md-3 parent-static">
+        <div class="parent-static bg-primary text-light p-4 rounded">
+          <h3>Parent: absolute</h3>
+          <p>child1 (abosolute ;<br> bottom:0px)</p>
+          <button class="btn btn-success child child1 parent-static-child"
+                  style="position:absolute; bottom:0px; opacity: 0.85;">
+                  parent-static, abs, bottom0</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+
+      <div class="col-md-3v parent-static">
+        <div class="bg-primary text-light p-4 rounded">
+          <h3>Parent: absolute</h3>
+          <p>child1 (abosolute ;<br>left:0px)</p>
+          <button class="btn btn-success child child1 parent-static-child"
+                  style="position:absolute; left:0px; opacity: 0.85;">
+                  parent-static, abs, left0</button>
+          <button class="btn btn-danger btn-block child">
+                  Child Two</button>
+          <button class="btn btn-warning btn-block text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!---------- 4. Fixed  ---------->
+    <h2 class="mt-5">4. Fixed：與parent無關，tag會固定在頁面的某個位置不動</h2>
+    <P>見右方fixed tag</P>
+    <div id="test1">
+      <span class="align-middle">absolute, top300 right0</span>
+    </div>
+
+    <div id="test2">
+      <span class="align-middle">fixed, top400 right0</span>
+    </div> 
+
+    <!---------- 5. Sticky  ---------->
+    <h2 class="mt-5">5. Sticky： 結合absolute及relative，往上滾動時只在parent內會黏住上邊</h2>
+    <p>
+      
+    </p>
+    <div class="row border border-danger" >
+      <div class="col-md-3">
+        <div class="bg-primary text-light p-4 rounded">
+          <h3>Parent: </h3>
+          <p>child1 (sticky ;<br>top:10px)</p>
+          <button class="btn btn-success child child1 parent-static-child"
+                  style="position:sticky; top:10px; opacity: 0.85;">
+                  parent-static, abs, top0</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+          <button class="btn btn-danger child">
+                  Child Two</button>
+          <button class="btn btn-warning text-light child">
+                  Child Three</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- my simple sticky -->
+  <h3 class="mt-5">my simple sticky tag test: sticky, top200 </h3>
+  <div class="p-5 bg-dark border border-danger" style="height:500px">
+    <div id="test0" class="d-inline h-100 display-4">
+      sticky, top:16px
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <hr>
+  <!-- background-attachment -->
+  <h1>Background-attachment：是否固定不動(fixed)，或滾動時跟著動(default:scroll)</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 bg-attach" style="background-attachment: fixed">
+        <div class="dark-overlay d-flex h-100 align-items-center p-5">
+          <h2>backgroun-attachment: fixed<br/>
+            <span style="font-size: 16px;">div.d-flex記得加w-100，不然它高度會跟子tag一樣，子tag永遠無法垂直置中</span>
+          </h2>
+        </div>
+      </div>
+      <div class="col-md-6 bg-attach">
+        <div class="dark-overlay d-flex h-100 align-items-center p-5">
+            <h2>backgroun-attachment: scroll(default)</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  </div>  
+  
+
+
+
+
+
+
+  <div style="margin-top:2000px;"></div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <!-- my js script -->
+  <script>
+    // must init tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+    
+    // use js to control tooltip
+    function showTooltip(){
+      $('#hello').tooltip("show");
+    }
+    function hideTooltip(){
+      $('#hello').tooltip("hide");
+    }
+    function toggleTooltip(){
+      $('#hello').tooltip("toggle");
+    }
+
+    // Tooltip events
+    $("#hello").on('show.bs.tooltip', function(){
+      console.log('Tooltip Show!')
+    })
+    $("#hello").on('shown.bs.tooltip', function(){
+      console.log('Tooltip Shown!')
+    })
+    $("#hello").on('hide.bs.tooltip', function(){
+      console.log('Tooltip Hide!')
+    })
+    $("#hello").on('hidden.bs.tooltip', function(){
+      console.log('Tooltip Hidden!')
+    })
+  </script>
+
+
+</body>
+
+</html>
